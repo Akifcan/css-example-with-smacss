@@ -1,0 +1,49 @@
+.container{
+    padding: 0 1em;
+}
+
+    .button{
+        text-transform: capitalize;
+        border: navajowhite;
+        padding: 1em;
+        background-color: black;
+        color: white;
+        display: flex;
+        gap: 2em;
+        align-items: center;
+    }
+    .section-name{
+       &::selection{
+        background-color: white;
+       }
+        cursor: default;
+        display: none;
+    position: absolute;
+    left: 0;
+    top: -35px;
+    color: black;
+    margin: 2em;
+    p{
+               &::selection{
+        background-color: white;
+       }
+
+        pointer-events: none;
+        font-size: 1.5rem;
+        letter-spacing: 9px;
+        text-transform: uppercase;
+        color: #dedede;
+        writing-mode: vertical-rl;
+    }
+    .line{
+        width: 5px;
+        height: 90px;
+        background-color: gray;
+    }
+}
+
+    .link{
+            font-size: 1.4rem;
+            color: #999BA5;
+            text-decoration: none;
+        }

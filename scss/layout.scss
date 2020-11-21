@@ -1,0 +1,124 @@
+.hero{
+    padding: 0 clamp(1em, 10vw, 15em);
+    color: white;
+    min-height: 70vh;
+    background-image: url(/images/image-1.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    h1{
+        line-height: 1;
+        font-size: clamp(2.5rem, 5vw, 7rem)
+    }
+    p{
+        margin: 1em 0 4em 0;
+    }
+}
+
+.description{
+    margin-top: 2em;
+    .line{
+        width: 20%;
+        height: .1em;
+        background-color: var(--color-grey);
+        margin: 0 0 3em 0;
+    }
+    h1{
+        position: relative;
+        font-size: clamp(2.5rem, 5vw, 7rem);
+        &::before{
+            display: n;
+            position: absolute;
+            content: 'WELCOME';
+            opacity: .5;
+            top: -50px;
+            transform: translateX(10%);
+            font-size: 16rem;
+        }
+    }
+    p {
+        color: var(--color-grey);
+        margin: 2em 0;
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+}
+
+.about-us{
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 0 clamp(1em, 10vw, 15em);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 60vh;
+    background: url(/images/image-2.jpg);
+    background-position: bottom;
+    background-size: cover;
+    gap: 2em;
+    h1{
+        font-size: 2.4rem;
+    }
+    text-transform: capitalize;
+    &::before{
+        z-index: -1;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #000000, $alpha: .6);
+    }
+}
+
+.featured{
+    margin-top: 2em;
+    h1{
+        font-size: 2rem;
+    }
+    button{
+        margin-top: 1em;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-weight: bold;
+    }
+    .features{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        counter-reset: number;
+        &__card{
+            position: relative;
+            min-height: 40vh;
+            background-size: cover;
+            text-transform: capitalize;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: white;
+            padding: 1em;
+            p{
+                font-size: 1.3rem;
+                font-weight: lighter;;
+            }
+            .number{
+                display: none;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                font-size: 15rem;
+                opacity: .5;
+                &::before{
+                    counter-increment: number;
+                    content: counter(number);
+                }
+            }
+        }
+    }
+}

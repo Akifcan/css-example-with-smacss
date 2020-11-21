@@ -1,0 +1,68 @@
+.container {
+  padding: 0 1em;
+}
+
+.button {
+  text-transform: capitalize;
+  border: navajowhite;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-name {
+  cursor: default;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: -35px;
+  color: black;
+  margin: 2em;
+}
+
+.section-name::-moz-selection {
+  background-color: white;
+}
+
+.section-name::selection {
+  background-color: white;
+}
+
+.section-name p {
+  pointer-events: none;
+  font-size: 1.5rem;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  color: #dedede;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+.section-name p::-moz-selection {
+  background-color: white;
+}
+
+.section-name p::selection {
+  background-color: white;
+}
+
+.section-name .line {
+  width: 5px;
+  height: 90px;
+  background-color: gray;
+}
+
+.link {
+  font-size: 1.4rem;
+  color: #999BA5;
+  text-decoration: none;
+}
+/*# sourceMappingURL=module.css.map */
